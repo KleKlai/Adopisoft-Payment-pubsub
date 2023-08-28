@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "pubsub-397308",
+  "private_key_id": "8291039b3097c48f3743852ee22ec8bd03011038",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCZM6zb+FyrBok7\nkuFVeStfk6UFGM2kdo03R5wHGVOfPmWQ9PKT1/lbYdzPreGbRquNIA0k7SzlmkVU\nNE8QeS2qcHFzT7B551sUJIO8MjU6EJa4rVqbzj2cSBO8bKlS+69iNAQRVJApIAAp\n+J8PoWZf5GybZ+T2OOgqp8/VTpBfTzd3fV5ZqGmrqlGSAivxWQVbJWPXBgzGbC8V\n88mTz9rkcCwSz3Rn74DTLki3PHmlZaSQAq/uGSP/OQ6UijJbsX3QIbSynx2hb/Qh\nCxUrgNdj8xfQlFDeTRdcEqrSnxPacnnYbmE/iJTTorRRr7aPytGuTeR8UrhRRni8\nhRMDtHlvAgMBAAECggEAQ0qRWKVEftKGIKapVxO722VMjGqSmPSBnpBTlkKnmkCb\n+Am/KvUoT90yUf48JCnsXDaBz4Blwgv6+7tmJwQy7LQrAM015LWcKcLIIjejbXev\n3Do4nEsAgM6f7JmF3i8yn93dE4ejMo0dxVGw+/qWrvP0SGZgCU6Bm4rOHRE/FL1W\newzO6TSOAbJUm2THH5wMIpGWH7arbLmdP7Ld0DFnHZ5We3W2VezGUvdgKA160s9d\nDu0F0Ev10HNlv6lSrOmT0mYOdCfTj73fYwN47PrT96iUKguhaDWyV3VBJyFHeWEM\nwHseumz9HSC7qV+QtckkdDcJ7mhgHnQAt6NT7vmlQQKBgQDS/LmOusUAaLZrLg39\nUaBLj7y67HCs+t6p58W8D7fsdb9Ae2aasyoT8J+gBhcTIwqFtvunEezUCE1HIN3u\n4WfvShs/2PpedWFuav9h3iD6Xrw9r13Q8t1ZNsn78ImCrVzr239hzv6yqZcBTwbc\nTdVnugjBvN/GJQ5UGW+p0ZQWnwKBgQC54vJAcJhS62erSeJorOQS0/LjxyDKtvb1\nWQIyIPoJ3iVLw7Ivh2Nd1wjJ0Lzu1u3AwUgpc2m+5RIJMucrUlY20aLqgWcQ4wNO\njCs37nxwDnDIthZLGG0kGt1au241kfbRi4dKzgI/j0mSOqPszAAZ9OEahIUVXVyz\nm4YlJGq7MQKBgA458j0YhN4RMXOqqFDTZy6RI5WrCbHwPIFSWnfiy3ELQ3kSmQmH\nWSf9CpZcssOckkIP44oRYFmvsZ5BLhXEZyCwa4PzmnYyDf7HAi9ULf8T0jeKkpXb\nOmeglSACyRLho6lXpJAwx+W+H6t766eBLAmRdrOxi5ktuHidOnVF52lbAoGAGrFn\nPi+tAAND4Mn8VDG3kqiS8XiP0exSLEs60H4Bydb3nhidBsw3TatqXKi36Mg+Xfaj\naShkn///BgkkPwlUzgxui6RHa5pdyDLCpgZ+Ig1AzuGu89uvGIcvEC9oFRM/0Tlr\nFSfeFMh7tR7smT12KkQK6ybqgXXlsPj9W2oOVZECgYBEK7tlDufwm/8Wd83IyPN2\naMyDPY3vnPO7mnP9chyJnATBPyb6wp40C3MVRvcAv0FMNWN+olihLJsJ+XbDMJQb\nGJwYoC/sZKBpAGQ47MNVOgrjTXloagPC9o4Ubfn88WnJaHCAySB8ojm3h/rbDLvG\nHELgrZFrG9yMIFmIe/M7ag==\n-----END PRIVATE KEY-----\n",
+  "client_email": "adopisoft-service-account@pubsub-397308.iam.gserviceaccount.com",
+  "client_id": "106428189700321869180",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/adopisoft-service-account%40pubsub-397308.iam.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
