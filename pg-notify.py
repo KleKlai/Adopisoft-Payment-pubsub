@@ -1,13 +1,17 @@
 import psycopg2
+import os
+from dotenv import load_dotenv
 
-# Database connection parameters
-db_params = {
-    "host": "your_host",
-    "port": "your_port",
-    "dbname": "your_dbname",
-    "user": "your_user",
-    "password": "your_password",
-}
+load_dotenv()
+
+def connect_to_database():
+    return psycopg2.connect(
+        host=os.getenv("DB_HOST"),
+        port=os.getenv("DB_PORT"),
+        dbname=os.getenv("DB_NAME"),
+        user=os.getenv("DB_USER"),
+        password=os.getenv("DB_PASSWORD"),
+    )
 
 # SQL statements to create the trigger function and trigger
 sql_trigger_function = """
@@ -29,14 +33,14 @@ EXECUTE PROCEDURE notify_new_payment();
 
 def add_trigger_and_function():
     try:
-        connection = psycopg2.connect(**db_params)
+        connection = connect_to_database()
         cursor = connection.cursor()
 
         cursor.execute(sql_trigger_function)
         cursor.execute(sql_create_trigger)
 
         connection.commit()
-        print("Trigger function and trigger created successfully.")
+        print("Trigger function and procedure created successfully.")
     except psycopg2.Error as e:
         print("Error:", e)
     finally:
