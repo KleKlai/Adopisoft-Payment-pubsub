@@ -4,7 +4,7 @@ import os
 
 def install_pip():
     try:
-        subprocess.run(["sudo", "apt-get", "install", "-y", "python3-pip"], check=True)
+        subprocess.call(["sudo", "apt-get", "install", "-y", "python3-pip"])
         print("pip installed successfully.")
     except subprocess.CalledProcessError as e:
         print("Error installing pip:", e)
@@ -12,7 +12,7 @@ def install_pip():
 
 def install_requirements():
     try:
-        subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
+        subprocess.call(["pip", "install", "-r", "requirements.txt"])
         print("Requirements installed successfully.")
     except subprocess.CalledProcessError as e:
         print("Error installing requirements:", e)
@@ -35,7 +35,7 @@ def main():
 
     # Run pg_notify.py to import trigger and function
     try:
-        subprocess.run(["python", "pg_notify.py"], check=True)
+        subprocess.call(["python", "pg_notify.py"])
         print("pg_notify.py executed successfully")
     except subprocess.CalledProcessError as e:
         print("Error running pg_notify.py:", e)

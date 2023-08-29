@@ -1,9 +1,12 @@
 import os
 from google.cloud import pubsub_v1
 from concurrent.futures import TimeoutError
+from dotenv import load_dotenv
 
-credentials_path = './adopisoft-payments-pubsub.json'
-os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = credentials_path
+load_dotenv()
+
+credentials_path = './privatekey.json'
+os.environ['GOOGLE_APPLICATION_CREDENTIALS'] = os.getenv("GOOGLE_APPLICATION_CREDENTIALS")
 
 subscriber = pubsub_v1.SubscriberClient()
 subscription_path = 'projects/pubsub-397308/subscriptions/adopisoft-machine-payments-sub'
