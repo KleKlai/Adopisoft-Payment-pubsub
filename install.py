@@ -2,7 +2,29 @@ import shutil
 import subprocess
 import os
 
+def install_pip():
+    try:
+        subprocess.run(["sudo", "apt-get", "install", "-y", "python3-pip"], check=True)
+        print("pip installed successfully.")
+    except subprocess.CalledProcessError as e:
+        print("Error installing pip:", e)
+        return
+
+def install_requirements():
+    try:
+        subprocess.run(["pip", "install", "-r", "requirements.txt"], check=True)
+        print("Requirements installed successfully.")
+    except subprocess.CalledProcessError as e:
+        print("Error installing requirements:", e)
+        return
+
 def main():
+    # Install pip if not installed
+    install_pip()
+
+    # Install requirements from requirements.txt
+    install_requirements()
+
     # Copy .env.example to .env
     try:
         shutil.copy(".env.example", ".env")
