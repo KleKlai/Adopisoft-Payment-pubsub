@@ -10,7 +10,7 @@ fi
 
 # Function to install requirements in the virtual environment
 install_requirements() {
-    pip install -r requirements.txt
+    pip install -r /usr/bin/adopaynotif/requirements.txt
     if [ $? -eq 0 ]; then
         echo "Requirements installed successfully."
     else
@@ -22,9 +22,9 @@ install_requirements() {
 # Function to configure and start the systemd service
 configure_systemd_service() {
     # Create the systemd service file
-    cat <<EOF > /etc/systemd/system/adopisoft-payment-notification.service
+    cat <<EOF > /etc/systemd/system/adopaynotif.service
 [Unit]
-Description=Adopisoft payment notification collection agent service
+Description=Adopaynotif is a server-based agent for collecting and sending payment events
 After=network.target
 
 [Service]
@@ -42,8 +42,8 @@ EOF
     systemctl daemon-reload
 
     # Enable and start the systemd service
-    systemctl enable adopisoft-payment-notification
-    systemctl start adopisoft-payment-notification
+    systemctl enable adopaynotif
+    systemctl start adopaynotif
 
     echo "Systemd service configured and started."
 }
@@ -64,7 +64,7 @@ main() {
 
     # Run pg_notify.py to import trigger and function
     if [ -f pg_notify.py ]; then
-        python pg_notify.py
+        python /usr/bin/adopaynotif/pg_notify.py
         echo "pg_notify.py executed successfully."
     else
         echo "Error: pg_notify.py not found."
