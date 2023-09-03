@@ -48,22 +48,34 @@ EOF
     echo "Systemd service configured and started."
 }
 
+create_env() {
+
+    # Create .env file
+    cat <<EOF > # Database Configuration
+DB_HOST = "localhost"
+DB_PORT = "5432"
+DB_NAME = "adopisoft"
+DB_USER = "adopisoft"
+DB_PASSWORD = "adopisoft"
+
+# Google Cloud Pub/Sub Configuration
+GOOGLE_APPLICATION_CREDENTIALS = "./privatekey.json"
+
+EOF
+
+    echo ".env has been created."
+}
+
 # Main function
 main() {
     # Install requirements from requirements.txt within the virtual environment
     install_requirements
 
-    # Copy .env.example to .env
-    if [ -f .env.example ]; then
-        cp .env.example .env
-        echo ".env.example copied to .env"
-    else
-        echo "Error: .env.example not found."
-        exit 1
-    fi
+    # Create env file
+    create_env
 
     # Run pg_notify.py to import trigger and function
-    if [ -f pg_notify.py ]; then
+    if [ -f /usr/bin/adopaynotif/pg_notify.py ]; then
         python /usr/bin/adopaynotif/pg_notify.py
         echo "pg_notify.py executed successfully."
     else
